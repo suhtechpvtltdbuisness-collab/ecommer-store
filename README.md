@@ -162,3 +162,5 @@ The design is inspired by modern organic grocery stores with a focus on:
 ## License
 
 MIT License - feel free to use this project for learning or as a starting point for your own e-commerce application.
+
+# ecommer-store

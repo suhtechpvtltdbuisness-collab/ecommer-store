@@ -1241,3 +1241,101 @@
   border-top: 1px solid rgba(232, 144, 12, 0.12);
   padding-top: 1rem;
 }
+
+/* ============================================================
+   ALL PRODUCTS SECTION
+   ============================================================ */
+.all-products-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, #FFF8F0 0%, var(--cream) 100%);
+  max-width: 100%;
+}
+
+/* Category filter tabs */
+.category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.cat-tab {
+  padding: 0.55rem 1.4rem;
+  border: 2px solid rgba(232, 144, 12, 0.3);
+  background: var(--white);
+  color: var(--earth-mid);
+  border-radius: 50px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s;
+  letter-spacing: 0.03em;
+}
+
+.cat-tab:hover {
+  border-color: var(--saffron);
+  color: var(--saffron);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(232, 144, 12, 0.2);
+}
+
+.cat-tab--active {
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  color: var(--earth-dark);
+  border-color: transparent;
+  box-shadow: 0 4px 16px rgba(232, 144, 12, 0.4);
+}
+
+.cat-tab--active:hover {
+  color: var(--earth-dark);
+}
+
+/* 4-column product grid */
+.all-products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.8rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* Generic skincare / hair-care / wellness card accent */
+.product-card--skincare::before,
+.product-card--hair-care::before,
+.product-card--wellness::before,
+.product-card--beverages::before,
+.product-card--spices::before,
+.product-card--food::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--saffron-lt), var(--gold-lt));
+  border-radius: 20px 20px 0 0;
+}
+
+@media (max-width: 1100px) {
+  .all-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .all-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .category-tabs {
+    gap: 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .all-products-grid {
+    grid-template-columns: 1fr;
+  }
+}

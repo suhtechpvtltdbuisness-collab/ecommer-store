@@ -21,7 +21,7 @@ const Header = () => {
           <button className="search-btn">🔍</button>
         </div>
         <nav className="nav">
-          <Link to="/" className="nav-link">
+          <Link to="/products" className="nav-link">
             Products
           </Link>
           <Link to="/cart" className="nav-link cart-link">

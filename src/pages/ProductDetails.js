@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
@@ -13,10 +13,33 @@ const ProductDetails = () => {
   const [selectedSize, setSelectedSize] = useState("M");
   const [selectedImage, setSelectedImage] = useState(0);
   const [activeTab, setActiveTab] = useState("description");
+  const [recommendedVisible, setRecommendedVisible] = useState(false);
+  const recommendedRef = useRef(null);
 
   const sizes = ["S", "M", "L", "XL", "2XL", "3XL"];
 
   const product = products.find((p) => p.id === parseInt(id));
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRecommendedVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+    const el = recommendedRef.current;
+    if (el) observer.observe(el);
+    return () => { if (el) observer.unobserve(el); };
+  }, [product]);
+
+  // Reset state when product changes
+  useEffect(() => {
+    setRecommendedVisible(false);
+    setSelectedImage(0);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [id]);
 
   if (!product) {
     return (
@@ -42,10 +65,11 @@ const ProductDetails = () => {
     setQuantity(newQuantity);
   };
 
-  // Get related products (same category, excluding current product)
-  const relatedProducts = products
-    .filter((p) => p.category === product.category && p.id !== product.id)
-    .slice(0, 3);
+  // Get recommended products: same category first, then other categories, excluding current
+  const sameCategory = products.filter((p) => p.category === product.category && p.id !== product.id);
+  const otherProducts = products.filter((p) => p.category !== product.category && p.id !== product.id);
+  const relatedProducts = sameCategory.slice(0, 3);
+  const recommendedProducts = [...sameCategory, ...otherProducts].slice(0, 8);
 
   return (
     <div className="product-details-page">
@@ -134,6 +158,19 @@ const ProductDetails = () => {
               ))}
             </div>
           </div>
+
+          {product.benefits && (
+            <div className="benefits-section">
+              <h3 className="benefits-title">Key Benefits</h3>
+              <ul className="benefits-list">
+                {product.benefits.map((benefit, idx) => (
+                  <li key={idx} className="benefit-item">
+                    <span className="benefit-icon">✓</span> {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="product-meta">
             <div className="meta-item">
@@ -342,6 +379,39 @@ const ProductDetails = () => {
               </div>
             </div>
           )}
+        </div>
+      </div>
+
+      {/* Recommended Products Section */}
+      <div
+        ref={recommendedRef}
+        className={`recommended-section ${recommendedVisible ? "visible" : ""}`}
+      >
+        <div className="recommended-header">
+          <h2 className="recommended-title">🌿 Recommended for You</h2>
+          <p className="recommended-subtitle">Products you might also love</p>
+        </div>
+        <div className="recommended-grid">
+          {recommendedProducts.map((rec) => (
+            <Link
+              key={rec.id}
+              to={`/product/${rec.id}`}
+              className="rec-card"
+            >
+              {rec.badge && <span className="rec-badge">{rec.badge}</span>}
+              <div className="rec-image-wrap">
+                <img src={rec.image} alt={rec.name} className="rec-image" />
+              </div>
+              <div className="rec-info">
+                <span className="rec-category">{rec.category}</span>
+                <h4 className="rec-name">{rec.name}</h4>
+                <div className="rec-footer">
+                  <span className="rec-price">${rec.price.toFixed(2)}</span>
+                  <span className="rec-rating">⭐ {rec.rating}</span>
+                </div>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </div>

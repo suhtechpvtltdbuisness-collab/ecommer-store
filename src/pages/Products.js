@@ -4,7 +4,7 @@ import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
 import "./Products.css";
 
-/* IDs 1 = Kesar, 2 = Shilajit */
+/* IDs 1 = Kesar, 2 = Shilajit — kept as hero feature */
 const featuredIds = [1, 2];
 
 const whyCards = [
@@ -129,7 +129,7 @@ const Products = () => {
           </p>
           <div className="video-hero__actions">
             <a href="#why-us" className="btn-primary">Discover More</a>
-            <a href="#featured" className="btn-outline">Shop Now</a>
+            <Link to="/products" className="btn-outline">Shop Now</Link>
           </div>
         </div>
         <div className="hero-badges">
@@ -245,9 +245,11 @@ const Products = () => {
         ))}
       </section>
 
+
       {/* ════════════════════════════════════════
           UNLOCK SECTION — with animated flower bg
       ════════════════════════════════════════ */}
+
       <div className="unlock-section-outer">
 
         {/* ── Big saffron flower — left side ── */}
@@ -342,9 +344,9 @@ const Products = () => {
             <p className="unlock-desc">
               Focusing on ancient Ayurvedic wisdom is transformative because it reconnects you with nature's most potent remedies. Kesar and Shilajit empower you to see possibilities in your health — boundless energy, glowing skin, a sharp mind, and a resilient body. Together, they create a path to total wellness.
             </p>
-            <a href="#featured" className="unlock-cta">
+            <Link to="/products" className="unlock-cta">
               🌸 Explore Products
-            </a>
+            </Link>
 
             {/* Three mini-cards */}
             <div className="unlock-cards">

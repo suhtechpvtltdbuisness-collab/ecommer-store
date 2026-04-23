@@ -692,3 +692,211 @@
     justify-content: center;
   }
 }
+
+/* ===== Key Benefits Section ===== */
+.benefits-section {
+  background: linear-gradient(135deg, #f0fdf8 0%, #e6f7f2 100%);
+  border: 1px solid #b2dfdb;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.benefits-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e5c54;
+  margin: 0 0 0.75rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.benefit-icon {
+  width: 20px;
+  height: 20px;
+  background: #1e5c54;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* ===== Recommended Products Section ===== */
+.recommended-section {
+  max-width: 1200px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.recommended-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.recommended-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.recommended-title {
+  font-size: 1.8rem;
+  color: #1e5c54;
+  margin: 0 0 0.5rem 0;
+}
+
+.recommended-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.recommended-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.rec-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid #f0f0f0;
+}
+
+.rec-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(30, 92, 84, 0.18);
+  border-color: #b2dfdb;
+}
+
+.rec-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #1e5c54, #2d7a6e);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rec-image-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.rec-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.rec-card:hover .rec-image {
+  transform: scale(1.06);
+}
+
+.rec-info {
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.rec-category {
+  font-size: 0.75rem;
+  color: #1e5c54;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.rec-name {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rec-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.4rem;
+}
+
+.rec-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e5c54;
+}
+
+.rec-rating {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .recommended-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .benefits-list {
+    grid-template-columns: 1fr;
+  }
+
+  .recommended-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recommended-section {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommended-grid {
+    grid-template-columns: 1fr;
+  }
+}

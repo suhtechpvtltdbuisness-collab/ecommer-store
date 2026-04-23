@@ -213,13 +213,9 @@ export const products = [
     price: 15.99,
     description:
       "Premium organic green tea leaves handpicked from Himalayan gardens. Rich in antioxidants and natural flavor.",
-    image:
-      "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=500&h=500&fit=crop",
+    image: "/images/tea2.webp",
     images: [
-      "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1597318370836-7a6d3a4e5b95?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1558160074-4d7d680b3e8c?w=500&h=500&fit=crop",
+      "/images/tea2.webp",
     ],
     category: "Beverages",
     stock: 35,
@@ -236,13 +232,9 @@ export const products = [
     price: 18.99,
     description:
       "Raw, unprocessed organic honey harvested from Himalayan forests. Pure and natural sweetener with health benefits.",
-    image:
-      "https://images.unsplash.com/photo-1587049352846-4a222e784f1d?w=500&h=500&fit=crop",
+    image: "/images/product-name-arivasa-organics-250-gms-3828128.webp",
     images: [
-      "https://images.unsplash.com/photo-1587049352846-4a222e784f1d?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1558642891-54be180ea339?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?w=500&h=500&fit=crop",
+      "/images/product-name-arivasa-organics-250-gms-3828128.webp",
     ],
     category: "Food",
     stock: 40,
@@ -281,11 +273,9 @@ export const products = [
     price: 7.99,
     description:
       "Organic dried ginger powder with natural warmth and spice. Great for tea, cooking, and wellness.",
-    image:
-      "https://images.unsplash.com/photo-1599909533026-89d36d5c4c6e?w=500&h=500&fit=crop",
+    image: "/images/81-5C16NXLL.webp",
     images: [
-      "https://images.unsplash.com/photo-1599909533026-89d36d5c4c6e?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1615485500834-bc10199bc964?w=500&h=500&fit=crop",
+      "/images/81-5C16NXLL.webp",
     ],
     category: "Spices",
     stock: 55,
@@ -320,10 +310,9 @@ export const products = [
     price: 22.99,
     description:
       "Premium organic ashwagandha root powder. Natural adaptogen for stress relief and overall wellness.",
-    image:
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=500&fit=crop",
+    image: "/images/B0CPFP7Y92.PT12.webp",
     images: [
-      "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=500&h=500&fit=crop",
+      "/images/B0CPFP7Y92.PT12.webp",
     ],
     category: "Wellness",
     stock: 25,
@@ -358,10 +347,9 @@ export const products = [
     price: 19.99,
     description:
       "Nutrient-rich organic moringa leaf powder. Superfood packed with vitamins, minerals, and antioxidants.",
-    image:
-      "https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?w=500&h=500&fit=crop",
+    image: "/images/himalayan-organics-certified-organic-moringa-powder-moringa-oleifera-6.2-1709632083.webp",
     images: [
-      "https://images.unsplash.com/photo-1505253149613-112d21d9f6a9?w=500&h=500&fit=crop",
+      "/images/himalayan-organics-certified-organic-moringa-powder-moringa-oleifera-6.2-1709632083.webp",
     ],
     category: "Wellness",
     stock: 35,
@@ -377,10 +365,9 @@ export const products = [
     price: 24.99,
     description:
       "Natural moisturizing face cream with organic ingredients. Hydrates and nourishes skin deeply.",
-    image:
-      "https://images.unsplash.com/photo-1556228852-80c98f57b9a8?w=500&h=500&fit=crop",
+    image: "/images/himalaya-natural-glow-kesar-face-cream-50gm_himalaya-natural-glow-kesar-face-cream-50gm--TM-COOM1-005420_1.webp",
     images: [
-      "https://images.unsplash.com/photo-1556228852-80c98f57b9a8?w=500&h=500&fit=crop",
+      "/images/himalaya-natural-glow-kesar-face-cream-50gm_himalaya-natural-glow-kesar-face-cream-50gm--TM-COOM1-005420_1.webp",
     ],
     category: "Skincare",
     stock: 40,
@@ -396,10 +383,9 @@ export const products = [
     price: 17.99,
     description:
       "Ayurvedic herbal tea blend with natural herbs from the Himalayas. Promotes relaxation and wellness.",
-    image:
-      "https://images.unsplash.com/photo-1597318370836-7a6d3a4e5b95?w=500&h=500&fit=crop",
+    image: "/images/tea2-430x430.webp",
     images: [
-      "https://images.unsplash.com/photo-1597318370836-7a6d3a4e5b95?w=500&h=500&fit=crop",
+      "/images/tea2-430x430.webp",
     ],
     category: "Beverages",
     stock: 50,

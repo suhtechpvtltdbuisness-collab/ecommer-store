@@ -1,3 +1,20 @@
+:root {
+  --saffron: #E8900C;
+  --saffron-lt: #F4A520;
+  --saffron-pale: #FFF3DC;
+  --gold: #D4A017;
+  --gold-lt: #FFD700;
+  --earth-dark: #1A0E05;
+  --earth: #3B1F0A;
+  --earth-mid: #6B3F2A;
+  --earth-lt: #C49A6C;
+  --cream: #FFF8F0;
+  --white: #ffffff;
+  --text-dark: #1A0E05;
+  --text-mid: #5A3E28;
+  --text-light: #9A7B5C;
+}
+
 * {
   margin: 0;
   padding: 0;

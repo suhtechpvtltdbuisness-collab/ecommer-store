@@ -113,7 +113,7 @@ const ProductDetails = () => {
           </div>
 
           <div className="price-section">
-            <span className="price">${product.price.toFixed(2)}</span>
+            <span className="price">₹{(product.price * 83).toFixed(0)}</span>
           </div>
 
           <p className="product-description">{product.description}</p>
@@ -306,7 +306,7 @@ const ProductDetails = () => {
                     <img src={relatedProduct.image} alt={relatedProduct.name} />
                     <h4>{relatedProduct.name}</h4>
                     <p className="related-price">
-                      ${relatedProduct.price.toFixed(2)}
+                      ₹{(relatedProduct.price * 83).toFixed(0)}
                     </p>
                   </Link>
                 ))}
@@ -406,7 +406,7 @@ const ProductDetails = () => {
                 <span className="rec-category">{rec.category}</span>
                 <h4 className="rec-name">{rec.name}</h4>
                 <div className="rec-footer">
-                  <span className="rec-price">${rec.price.toFixed(2)}</span>
+                  <span className="rec-price">₹{(rec.price * 83).toFixed(0)}</span>
                   <span className="rec-rating">⭐ {rec.rating}</span>
                 </div>
               </div>

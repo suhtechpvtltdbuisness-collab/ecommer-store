@@ -38,7 +38,7 @@ const Cart = () => {
 
               <div className="cart-item-details">
                 <h3 className="cart-item-name">{item.name}</h3>
-                <p className="cart-item-price">${item.price.toFixed(2)} each</p>
+                <p className="cart-item-price">₹{(item.price * 83).toFixed(0)} each</p>
               </div>
 
               <div className="cart-item-quantity">
@@ -58,7 +58,7 @@ const Cart = () => {
               </div>
 
               <div className="cart-item-total">
-                ${(item.price * item.quantity).toFixed(2)}
+                ₹{(item.price * item.quantity * 83).toFixed(0)}
               </div>
 
               <button
@@ -77,17 +77,17 @@ const Cart = () => {
 
           <div className="summary-row">
             <span>Subtotal</span>
-            <span>${getCartTotal().toFixed(2)}</span>
+            <span>₹{(getCartTotal() * 83).toFixed(0)}</span>
           </div>
 
           <div className="summary-row">
             <span>Shipping</span>
-            <span>$10.00</span>
+            <span>₹830</span>
           </div>
 
           <div className="summary-row">
             <span>Tax (10%)</span>
-            <span>${(getCartTotal() * 0.1).toFixed(2)}</span>
+            <span>₹{(getCartTotal() * 0.1 * 83).toFixed(0)}</span>
           </div>
 
           <div className="summary-divider"></div>
@@ -95,7 +95,7 @@ const Cart = () => {
           <div className="summary-row total">
             <span>Total</span>
             <span>
-              ${(getCartTotal() + 10 + getCartTotal() * 0.1).toFixed(2)}
+              ₹{((getCartTotal() + 10 + getCartTotal() * 0.1) * 83).toFixed(0)}
             </span>
           </div>
 

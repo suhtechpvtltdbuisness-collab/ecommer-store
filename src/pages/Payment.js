@@ -158,7 +158,7 @@ const Payment = () => {
               </div>
 
               <button type="submit" className="pay-btn" disabled={processing}>
-                {processing ? "Processing..." : `Pay $${total.toFixed(2)}`}
+                {processing ? "Processing..." : `Pay ₹${(total * 83).toFixed(0)}`}
               </button>
             </form>
           )}
@@ -201,20 +201,20 @@ const Payment = () => {
           <div className="summary-items">
             <div className="summary-row">
               <span>Items ({cartItems.length})</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>₹{(subtotal * 83).toFixed(0)}</span>
             </div>
             <div className="summary-row">
               <span>Shipping</span>
-              <span>${shipping.toFixed(2)}</span>
+              <span>₹{(shipping * 83).toFixed(0)}</span>
             </div>
             <div className="summary-row">
               <span>Tax (10%)</span>
-              <span>${tax.toFixed(2)}</span>
+              <span>₹{(tax * 83).toFixed(0)}</span>
             </div>
             <div className="summary-divider"></div>
             <div className="summary-row total">
               <span>Total</span>
-              <span>${total.toFixed(2)}</span>
+              <span>₹{(total * 83).toFixed(0)}</span>
             </div>
           </div>
 

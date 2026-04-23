@@ -211,7 +211,6 @@ const Products = () => {
                 )}
                 <p className="product-price">
                   ₹{(product.price * 83).toFixed(0)}
-                  <span className="product-price-usd"> / ${product.price.toFixed(2)}</span>
                 </p>
                 <div className="product-actions">
                   <Link to={`/product/${product.id}`} className="view-details-btn">View Details</Link>

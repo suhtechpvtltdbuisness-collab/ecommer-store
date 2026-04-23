@@ -135,7 +135,6 @@ const AllProducts = () => {
                 )}
                 <p className="ap-card__price">
                   ₹{(product.price * 83).toFixed(0)}
-                  <span className="ap-card__price-usd"> / ${product.price.toFixed(2)}</span>
                 </p>
                 <div className="ap-card__actions">
                   <Link to={`/product/${product.id}`} className="ap-card__view-btn">

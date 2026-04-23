@@ -897,6 +897,19 @@
 
 @media (max-width: 480px) {
   .recommended-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .rec-card img {
+    height: 140px;
+  }
+
+  .rec-name {
+    font-size: 0.85rem;
+  }
+
+  .rec-price {
+    font-size: 0.9rem;
   }
 }

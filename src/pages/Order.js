@@ -170,7 +170,7 @@ const Order = () => {
                   <p className="item-quantity">Qty: {item.quantity}</p>
                 </div>
                 <div className="item-price">
-                  ${(item.price * item.quantity).toFixed(2)}
+                  ₹{(item.price * item.quantity * 83).toFixed(0)}
                 </div>
               </div>
             ))}
@@ -179,20 +179,20 @@ const Order = () => {
           <div className="order-totals">
             <div className="total-row">
               <span>Subtotal</span>
-              <span>${subtotal.toFixed(2)}</span>
+              <span>₹{(subtotal * 83).toFixed(0)}</span>
             </div>
             <div className="total-row">
               <span>Shipping</span>
-              <span>${shipping.toFixed(2)}</span>
+              <span>₹{(shipping * 83).toFixed(0)}</span>
             </div>
             <div className="total-row">
               <span>Tax (10%)</span>
-              <span>${tax.toFixed(2)}</span>
+              <span>₹{(tax * 83).toFixed(0)}</span>
             </div>
             <div className="total-divider"></div>
             <div className="total-row grand-total">
               <span>Total</span>
-              <span>${total.toFixed(2)}</span>
+              <span>₹{(total * 83).toFixed(0)}</span>
             </div>
           </div>
         </div>
